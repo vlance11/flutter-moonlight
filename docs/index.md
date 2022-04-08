@@ -3,11 +3,12 @@
 
 # MoonLight
 
-Flutter Admin using core dart 
+Flutter Admin using core dart  base on MVC architecture
 
 ## Documentation
 
-[Documentation]()
+- [MoonLight Manual Installation](#moonlight-manual-installation)
+
 
 ## Third Party Package Used
 - **[Google Fonts (google_fonts)](https://pub.dev/packages/google_fonts)**

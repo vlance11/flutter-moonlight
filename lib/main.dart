@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:moonlight/constants/app.dart';
+import 'constants/routes.dart';
+import 'constants/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,25 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Moonlight")),
-      body: Center(
-        child: Text("Welcome to Flutter Moonlight Framework"),
-      ),
+      title: APP_NAME,
+      theme: lightTheme,
+      themeMode: ThemeMode.system,
+      initialRoute: '/',
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
