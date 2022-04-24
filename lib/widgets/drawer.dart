@@ -68,6 +68,20 @@ class MoonLightDrawer extends StatelessWidget {
           Navigator.of(context).popAndPushNamed(LoadMoreUsingAPIRoute);
         },
       ),
+      DrawerTile(
+        title: "Buttons Example",
+        icon: Icons.home,
+        onTap: () {
+          Navigator.of(context).popAndPushNamed(ButtonsExampleRoute);
+        },
+      ),
+      DrawerTile(
+        title: "Input Fields Example",
+        icon: Icons.home,
+        onTap: () {
+          Navigator.of(context).popAndPushNamed(InputFieldsExampleRoute);
+        },
+      ),
 
       // DrawerTile(
       //   title: "Logout",

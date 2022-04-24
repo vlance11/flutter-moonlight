@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../views/example/buttons_view.dart';
 import '../views/example/grid_view.dart';
+import '../views/example/input_fields_example.dart';
 import '../views/example/load_local_image.dart';
 import '../views/example/load_local_json.dart';
 import '../views/example/load_more_using_api.dart';
@@ -12,6 +14,8 @@ const GridViewRoute = "/grid-view";
 const LoadLocalImageRoute = "/load-local-image";
 const LoadLocalJSONRoute = "/load-local-json";
 const LoadMoreUsingAPIRoute = "/load-more-using-api";
+const ButtonsExampleRoute = "/buttons-example";
+const InputFieldsExampleRoute = "/input-fields-example";
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -30,6 +34,10 @@ class Routes {
         return MaterialPageRoute(builder: (_) => LoadLocalJSONPage());
       case LoadMoreUsingAPIRoute:
         return MaterialPageRoute(builder: (_) => LoadMoreUsingAPIPage());
+      case ButtonsExampleRoute:
+        return MaterialPageRoute(builder: (_) => ButtonsExample());
+      case InputFieldsExampleRoute:
+        return MaterialPageRoute(builder: (_) => InputFieldsExample());
         // case '/second':
         //   // Validation of correct data type
         //   if (args is String) {
