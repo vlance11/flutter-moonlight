@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moonlight/views/example/load_local_image.dart';
-
-import '../constants/app.dart';
 import '../constants/routes.dart';
-import '../utils/tools.dart';
 import 'drawer-tile.dart';
 
 class MoonLightDrawer extends StatelessWidget {
@@ -37,89 +33,30 @@ class MoonLightDrawer extends StatelessWidget {
         title: "Home",
         icon: Icons.home,
         onTap: () {
-          Navigator.of(context).pushNamed(rootRoute);
-        },
-      ),
-      DrawerTile(
-        title: "Grid View",
-        icon: Icons.home,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(GridViewRoute);
-        },
-      ),
-      DrawerTile(
-        title: "Load Local Image",
-        icon: Icons.home,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(LoadLocalImageRoute);
-        },
-      ),
-      DrawerTile(
-        title: "Load Local JSON",
-        icon: Icons.home,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(LoadLocalJSONRoute);
-        },
-      ),
-      DrawerTile(
-        title: "Load More Using API",
-        icon: Icons.home,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(LoadMoreUsingAPIRoute);
-        },
-      ),
-      DrawerTile(
-        title: "Buttons Example",
-        icon: Icons.home,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(ButtonsExampleRoute);
-        },
-      ),
-      DrawerTile(
-        title: "Input Fields Example",
-        icon: Icons.home,
-        onTap: () {
-          Navigator.of(context).popAndPushNamed(InputFieldsExampleRoute);
+          Navigator.of(context).popAndPushNamed(rootRoute);
         },
       ),
 
+      DrawerTile(
+        title: "Examples",
+        icon: Icons.list,
+        onTap: () {
+          Navigator.of(context).popAndPushNamed(ExampleRoute);
+        },
+      ),
+      DrawerTile(
+        title: "Settings",
+        icon: Icons.settings,
+        onTap: () {
+          Navigator.of(context).popAndPushNamed(SettingsRoute);
+        },
+      ),
+      // Divider(),
       // DrawerTile(
       //   title: "Logout",
       //   icon: Icons.logout,
       //   onTap: () {
       //     Navigator.of(context).pushNamed(Routes.initRoute);
-      //   },
-      // ),
-      Divider(),
-      // Center(
-      //     child: Text(
-      //   "Application",
-      //   style: TextStyle(fontWeight: FontWeight.bold),
-      // )),
-      DrawerTile(
-        title: "Privacy Policy",
-        icon: Icons.gavel,
-        onTap: () => launchURL(appPrivacyPolicyURL),
-      ),
-      DrawerTile(
-        title: "Terms & Conditions",
-        icon: Icons.description,
-        onTap: () => launchURL(appTermsConditionsURL),
-      ),
-
-      DrawerTile(
-        title: "Share the App",
-        icon: Icons.share,
-        onTap: () {
-          CustomShare('check out my website https://example.com');
-        },
-      ),
-      DrawerTile(title: "Rate This App", icon: Icons.star, onTap: () {}),
-      // DrawerTile(
-      //   title: "Settings",
-      //   icon: Icons.settings,
-      //   onTap: () {
-      //     Navigator.of(context).pushNamed(Routes.settingsRoute);
       //   },
       // ),
     ])));

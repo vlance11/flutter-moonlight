@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moonlight/views/settings_view.dart';
 
 import '../views/example/buttons_view.dart';
 import '../views/example/grid_view.dart';
@@ -6,10 +7,14 @@ import '../views/example/input_fields_example.dart';
 import '../views/example/load_local_image.dart';
 import '../views/example/load_local_json.dart';
 import '../views/example/load_more_using_api.dart';
+import '../views/example_view.dart';
 import '../views/home_view.dart';
 
 //Routes Name Define
 const rootRoute = "/";
+const SettingsRoute = "/settings";
+const ExampleRoute = "/example";
+
 const GridViewRoute = "/grid-view";
 const LoadLocalImageRoute = "/load-local-image";
 const LoadLocalJSONRoute = "/load-local-json";
@@ -25,6 +30,12 @@ class Routes {
     switch (settings.name) {
       case rootRoute:
         return MaterialPageRoute(builder: (_) => HomeView());
+      case SettingsRoute:
+        return MaterialPageRoute(builder: (_) => SettingsView());
+      case ExampleRoute:
+        return MaterialPageRoute(builder: (_) => ExampleView());
+      case ExampleRoute:
+        return MaterialPageRoute(builder: (_) => ExampleView());
       //Example Pages
       case GridViewRoute:
         return MaterialPageRoute(builder: (_) => GridViewPage());

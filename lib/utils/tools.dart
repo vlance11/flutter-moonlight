@@ -23,3 +23,24 @@ void CustomShare(message) async {
 CustomGoBack(BuildContext context) {
   Navigator.pop(context);
 }
+
+//new
+void _showUrl() {
+  _launch('http://www.nandiraju.com');
+}
+
+void _showEmail(email) {
+  _launch('mailto:srikanth@nandiraj.com');
+}
+
+void _showTelephone(phone) {
+  _launch('tel:' + phone);
+}
+
+void _showSms(phone) {
+  _launch('sms:' + phone);
+}
+
+void _launch(String urlString) async {
+  if (!await launch(urlString)) throw 'Could not launch $urlString';
+}

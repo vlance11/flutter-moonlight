@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: MoonLightDrawer("Home"),
-      appBar: AppBar(title: Text(APP_NAME)),
+      appBar: AppBar(title: Text("Home")),
       body: Center(
         child: Text("Welcome to Flutter Moonlight Framework"),
       ),
