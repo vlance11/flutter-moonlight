@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import '../constants/app.dart';
+import '../main.dart';
 import '../utils/tools.dart';
 import '../widgets/drawer.dart';
 
@@ -24,10 +25,19 @@ class SettingsView extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w500)),
             ),
             ListTile(
-              leading: Icon(Icons.dark_mode),
-              title: Text("Dark Mode"),
+              leading: Icon(MyApp.themeNotifier.value == ThemeMode.light
+                  ? Icons.dark_mode
+                  : Icons.light_mode),
+              title: MyApp.themeNotifier.value == ThemeMode.light
+                  ? Text("Dark Mode")
+                  : Text("Light Mode"),
               trailing: Icon(Icons.navigate_next),
-              onTap: (() {}),
+              onTap: (() {
+                MyApp.themeNotifier.value =
+                    MyApp.themeNotifier.value == ThemeMode.light
+                        ? ThemeMode.dark
+                        : ThemeMode.light;
+              }),
             ),
             Center(
               child: Text("Help",
