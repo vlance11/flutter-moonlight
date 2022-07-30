@@ -24,6 +24,7 @@ This Docs given Flutter easy implement Flutter Project
 - Load local image
 - Load local json
 - Load More Data Using API## Documentation
+- Using Bottom Nav Bar Example
 
 ## Documentation
 
@@ -52,6 +53,7 @@ lib
 |      │──load_local_image.dart
 |      │──load_local_json.dart
 |      │──load_more_using_api.dart
+|      │──using_bottom_nav_bar.dart
 |      └──validator.dart.dart
 │───widgets
 |   │──navbar.dart

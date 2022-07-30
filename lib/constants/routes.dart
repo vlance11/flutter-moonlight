@@ -7,6 +7,7 @@ import '../views/example/input_fields_example.dart';
 import '../views/example/load_local_image.dart';
 import '../views/example/load_local_json.dart';
 import '../views/example/load_more_using_api.dart';
+import '../views/example/using_bottom_nav_bar.dart';
 import '../views/example_view.dart';
 import '../views/home_view.dart';
 
@@ -21,6 +22,7 @@ const LoadLocalJSONRoute = "/load-local-json";
 const LoadMoreUsingAPIRoute = "/load-more-using-api";
 const ButtonsExampleRoute = "/buttons-example";
 const InputFieldsExampleRoute = "/input-fields-example";
+const UsingBottomNavBarExampleRoute = "/using-bottom-nav-bar";
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -49,6 +51,8 @@ class Routes {
         return MaterialPageRoute(builder: (_) => ButtonsExample());
       case InputFieldsExampleRoute:
         return MaterialPageRoute(builder: (_) => InputFieldsExample());
+      case UsingBottomNavBarExampleRoute:
+        return MaterialPageRoute(builder: (_) => UsingBottomNavBarView());
         // case '/second':
         //   // Validation of correct data type
         //   if (args is String) {
